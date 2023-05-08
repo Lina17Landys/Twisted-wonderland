@@ -1,0 +1,181 @@
+body {
+    background-color: #1D1D1F;
+    font-family: 'GFS Didot', serif;
+    margin: 0;
+    overflow-y: none;
+    overflow-y: hidden;
+    overflow-x: none;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    height: 77px;
+    justify-content: space-between;
+    background-color: rgba(255, 252, 217, 0.36);
+    align-items: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a {
+    padding-right: 15px;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+p {
+    color: white;
+    font-size: large;
+}
+
+.formulario {
+    display: flex;
+    position: relative;
+   left: 750px;
+   align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+   height: 530px;
+   width: 430px;
+}
+
+form .title {
+    font-family: 'Gloock', serif;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+form label {
+    margin-bottom: 35px;
+    font-family: 'GFS Didot', serif;
+}
+
+form label input {
+    background-color: rgba(225, 182, 137, 0.55);
+    border-radius: 13px;
+    border: solid 3px rgba(225, 182, 137, 0.55);
+    outline: none;
+    color: #fff;
+    padding: 0 5px;
+    font-size: 18px;
+    height: 40px;
+    width: 310px;
+}
+
+form label input::placeholder {
+    color: rgba(37, 37, 37, 0.5);
+}
+
+
+form .link {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+form button {
+    font-family: 'GFS Didot', serif;
+    color: #fff;
+    background-color: rgba(225, 182, 137, 1);
+    border: none;
+    margin-top: 30px;
+    border-radius: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 190px;
+    height: 40px;
+}
+
+.div-check {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-content: center;
+}
+
+.remember-me {
+    display: flex;
+    position: relative;
+    margin-bottom: 3px;
+    margin-left: 5px;
+}
+
+.vil-banner {
+    width: 580px;
+    height: 330px;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: 35px;
+    z-index: 1;
+}
+
+.cater-banner {
+    width: 580px;
+    height: 330px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+    top: 260px;
+    left: -320px;
+    margin-bottom: 25px;
+}
+
+.star {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 3;
+    right: 630px;
+    bottom: 80px;
+}
+
+.star2 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 4;
+    left: 160px;
+}
+
+.form-3 {
+    display: flex;
+    position: relative;
+    z-index: 5;
+    bottom: 500px;
+    left: 150px;
+    
+}
+
+.square, checkbox {
+    background-color: rgba(225, 182, 137, 0.55);
+    border: solid 3px rgba(225, 182, 137, 0.55); 
+}

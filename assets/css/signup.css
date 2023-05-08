@@ -1,0 +1,163 @@
+body {
+    background-color: #1D1D1F;
+    font-family: 'GFS Didot', serif;
+    margin: 0;
+    overflow-y: none;
+    overflow-y: hidden;
+    overflow-x: none;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    height: 77px;
+    justify-content: space-between;
+    background-color: rgba(255, 252, 217, 0.36);
+    align-items: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a {
+    padding-right: 15px;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+p {
+    color: white;
+    font-size: large;
+}
+
+label {
+    color: white;
+    font-family: 'GFS Didot', serif;
+    font-size: medium;
+}
+
+#form {
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+#form h1 {
+    font-family: 'Gloock', serif;
+    color: #fff;
+    text-align: center;
+}
+
+#form button {
+    font-family: 'GFS Didot', serif;
+    font-size: larger;
+    padding: 10px;
+    margin-top: 10px;
+    width: 200px;
+    color: white;
+    background-color: rgba(225, 182, 137, 1);
+    border: none;
+    border-radius: 4px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    margin-top: 10px;
+    background-color: rgba(225, 182, 137, 0.55);
+    border: 5px solid rgba(225, 182, 137, 0.55);
+    border-radius: 15px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    bottom: 100px;
+    right: 490px;
+}
+
+.rook-banner {
+    width: 580px;
+    height: 330px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+    bottom: 600px;
+    left: 150px;
+}
+
+.lilia-banner {
+    width: 550px;
+    height: 300px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 3;
+    bottom: 380px;
+    left: 550px;
+}
+
+.star {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 4;
+    bottom: 400px;
+    right: 700px;
+}
+
+.star-2 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 5;
+    bottom: 820px;
+    left: 570px;
+}

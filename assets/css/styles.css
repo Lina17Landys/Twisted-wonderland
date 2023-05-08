@@ -1,0 +1,346 @@
+body {
+    background-color: #1D1D1F;
+    font-family: 'GFS Didot', serif;
+    margin: 0;
+    overflow-y: none;
+    overflow-y: hidden;
+    overflow-x: none;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    height: 77px;
+    justify-content: space-between;
+    background-color: rgba(255, 252, 217, 0.36);
+    align-items: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a {
+    padding-right: 15px;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+p {
+    color: white;
+    font-weight: normal;
+}
+
+.stair-imagen1 {
+    position: relative;
+    z-index: 0;
+    width: 225px;
+    height: 310px;
+    border-radius: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    box-shadow: -10px -5px 5px rgba(255, 252, 217, 0.36);
+
+}
+
+.stair-imagen2 {
+    position: relative;
+    z-index: 1;
+    width: 225px;
+    height: 310px;
+    border-radius: 35px;
+    bottom: -180px;
+    left: -100px;
+    box-shadow: -10px -5px 5px rgba(255, 252, 217, 0.36);
+}
+
+.stair-imagen3 {
+    position: relative;
+    z-index: 2;
+    width: 225px;
+    height: 310px;
+    border-radius: 35px;
+    bottom: -320px;
+    left: -170px;
+    margin-bottom: 25px;
+    box-shadow: -10px -5px 5px rgba(255, 252, 217, 0.36);
+
+}
+
+.h1us {
+    font-family: 'Gloock', serif;
+    color: white;
+    position: relative;
+    z-index: 3;
+    bottom: 300px;
+    left: 500px;
+}
+
+.txt1 {
+    font-size: larger;
+    width: 250px;
+    position: relative;
+    z-index: 4;
+    bottom: 200px;
+    left: 650px;
+    text-align: right;
+}
+
+.icon1 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 4;
+    bottom: 200px;
+    left: 840px;
+}
+
+form {
+    margin-top: 100px;
+    margin-left: 120px;
+    height: 450px;
+    width: 430px;
+    padding: 1em;
+    border: 5px solid rgba(225, 182, 137, 1);
+    border-radius: 50px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+form li+li {
+    margin-top: 1em;
+}
+
+label {
+    font-weight: normal;
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    font-family: 'GFS Didot', serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 5px solid rgba(225, 182, 137, 1);
+    border-radius: 20px;
+    background-color: rgba(225, 182, 137, 0.55);
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgba(225, 182, 137, 1);
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.button {
+    padding-left: 90px;
+}
+
+button {
+    margin-left: .5em;
+}
+
+.tt2 {
+    font-family: 'Gloock', serif;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.boton1 {
+    margin-top: 40px;
+    font-family: 'GFS Didot', serif;
+    color: white;
+    height: 40px;
+    width: 190px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(225, 182, 137, 1);
+    margin-right: 50px;
+}
+
+.pluma {
+    position: relative;
+    z-index: 2;
+    height: 140px;
+    width: 80;
+    left: 440px;
+    bottom: 170px;
+}
+
+.iconos {
+    width: 80px;
+    height: 50px;
+}
+
+.form2ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+   right: 20px;
+  top: 30px;
+}
+
+.form2 {
+    width: 330px;
+    height: 370px;
+    border: 5px solid rgba(225, 182, 137, 1);
+    background-color:  #1D1D1F;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    bottom: 700px;
+    left: 520px;
+}
+
+.formh1 {
+    font-family: 'Gloock', serif;
+    color: white;
+    display: flex;
+    position: relative;
+    z-index: 4;
+    bottom: 1060px;
+    left: 560px;
+}
+
+.grim {
+    width: 230px;
+    height: 370px;
+    position: relative;
+    z-index: 5;
+    bottom: 900px;
+    left: 850px;
+}
+
+h3 {
+    font-family: 'Gloock', serif;
+font-size: x-large;
+  color: white;
+  margin-top: 60px;
+  margin-left: 50px;  
+}
+
+.coffin {
+    width: 85px;
+    height: 120px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.questions-1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+   right: 20px;
+  top: 30px;
+}
+
+.questions-2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+   right: 20px;
+  top: 30px;
+}
+
+.coff2 {
+    width: 85px;
+    height: 120px;
+    margin-left: 65px;
+    margin-top: 50px;
+}
+
+.pregunta {
+   position: relative;
+   z-index: 6;
+   bottom: 60px;
+   left: 140px;
+}
+
+.vil-banner {
+    width: 580px;
+    height: 330px;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: 35px;
+    z-index: 6;
+}
+
+.cater-banner {
+    width: 580px;
+    height: 330px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 7;
+    top: 260px;
+    left: -320px;
+    margin-bottom: 25px;
+}
+
+.star {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 8;
+    right: 630px;
+    bottom: 80px;
+}
+
+.star2 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 9;
+    left: 160px;
+}
+
+.form3h {
+    margin-bottom: 30px;
+}
+
+.form3 {
+    position: relative;
+    z-index: 10;
+    bottom: 450px;
+    left: 960px;
+    margin-top: 30px;
+}
