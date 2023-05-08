@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twisted Wonderland Forum</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .hi-slide {
+            position: relative;
+            width: 754px;
+            height: 292px;
+            margin-left: 300px;
+        }
+
+        .hi-slide .hi-next,
+        .hi-slide .hi-prev {
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+
+            border-radius: 50px;
+
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #fff;
+            color: black;
+            transition: all 0.6s;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .hi-slide .hi-next:hover,
+        .hi-slide .hi-prev:hover {
+            opacity: 1;
+            background-color: #fff;
+        }
+
+        .hi-slide .hi-prev {
+            left: -60px;
+        }
+
+        .hi-slide .hi-prev::before {
+            content: '<';
+        }
+
+        .hi-slide .hi-next {
+            right: -60px;
+        }
+
+        .hi-slide .hi-next::before {
+            content: '>';
+        }
+
+        .hi-slide>ul {
+            list-style: none;
+            position: relative;
+            width: 754px;
+            height: 292px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hi-slide>ul>li {
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            left: 377px;
+            top: 146px;
+            width: 0;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .hi-slide>ul>li>img {
+            width: 90%;
+            height: 90%;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="landing.html"><img src="assets/iconos/logo twst2.png"></a> 
+            <nav>
+                <a href="aboutus.html" class="nav-link">About us</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contacto.html" class="nav-link">Contact us</a>
+                <nav>
+        </div>
+
+        <nav>
+            <a href="login.html" class="nav-link">Log in</a>
+            <a href="signup.html" class="nav-link">Sign Up</a>
+        </nav>
+    </header>
+    <div class="banner">
+        <center>
+            <img class="bannerImg" src="assets/iconos/logo twst transp.png">
+            <h1>Welcome to our fan Forum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.
+                Non lorem nisl arcu ullamcorper eleifend. Porta amet eleifend hac congue integer nunc.</p>
+        </center>
+    </div>
+    <br><br>
+
+    <div class="slide hi-slide">
+        <div class="hi-prev "></div>
+        <div class="hi-next "></div>
+        <ul>
+            <li>
+                <img src="assets/iconos/heartslabyul.png" alt="Img 1" />
+            </li>
+            <li><img src="assets/iconos/savanaclaw.png" alt="Img 2" /></li>
+            <li><img src="assets/iconos/octavinelle.png" alt="Img 3" /></li>
+            <li><img src="assets/iconos/scarabia.png" alt="Img 4" /></li>
+            <li><img src="assets/iconos/pomefiore.png" alt="Img 5" /></li>
+            <li><img src="assets/iconos/ighinyde.png" alt="Img 6" /></li>
+            <li><img src="assets/iconos/diasomnia.png" alt="Img 7" /></li>
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script>
+        $('.slide').hiSlide();
+    </script>
+
+</body>
+
+</html>
