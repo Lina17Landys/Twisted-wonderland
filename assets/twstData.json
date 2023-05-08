@@ -110,5 +110,61 @@
             "spell1": "Flame Blast",
             "spell2": "Void Shot II"
         }
-    ]
+    ],
+    
+    "events": [
+        {
+            "id": "A",
+            "title": "Club Wear",
+            "duration": "10/03 ~ 22/03",
+            "img": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/Club_Wear_Jamil_Limited_Pick_Up_Banner.jpg?raw=true"
+        },
+        {
+            "id": "B",
+            "title": "Scalding Sands' Al'ab Nariya",
+            "duration": "12/07 ~ 04/08",
+            "img": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/fireworks.jpeg?raw=true"
+        },
+        {
+            "id": "C",
+            "title": "Pomefiore Training Camp",
+            "duration": "29/01 ~ 09/02",
+            "img": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/Pomefiore_Training_Camp_Banner.jpg?raw=true"
+        },
+        {
+            "id": "D",
+            "title": "Harveston's Kelkkarotu",
+            "duration": "31/01 ~ 22/02",
+            "img": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/Kelkkarotu_Event_Banner.jpg?raw=true"
+        },
+        {
+            "id": "E",
+            "title": "Sunset Savanna's Tamashina-Mina",
+            "duration": "07/02 ~ 27/02",
+            "img": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/Sunset_Savanna's.jpeg?raw=true"
+        },
+        {
+            "id": "F",
+            "title": "NRC Master Chef ~To Potatoes and Beyond~",
+            "duration": "12/09 ~ 22/09",
+            "img": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/master%20chef.jpeg?raw=true"
+        },
+        {
+            "id": "G",
+            "title": "Glorious Masquerade ~Crimson Flowers and the Bell of Salvation~",
+            "duration": "24/10 ~ 01/12",
+            "img": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/Glorious_Masquerade.png?raw=true"
+        },
+        {
+            "id": "H",
+            "title": "New Year Campaign",
+            "duration": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/1st_Anniversary_Banner.jpg?raw=true",
+            "img": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/imagenes/1st_Anniversary_Banner.jpg?raw=true"
+        }
+    
+        ]
+    
 }
+
+
+  
