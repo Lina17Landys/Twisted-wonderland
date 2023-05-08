@@ -11,7 +11,7 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
     const personajesDiv = document.getElementById('personajes');
     data.characters.forEach(personaje => {
       const icon = document.createElement('img');
-      icon.src = personaje.iconSrc;
+      icon.src = personaje.icon;
       personajesDiv.querySelector('.lista-personajes').appendChild(icon);
     });
     
