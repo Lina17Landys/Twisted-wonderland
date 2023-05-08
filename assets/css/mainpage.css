@@ -91,9 +91,22 @@ h2 {
     margin-left: -35px;
 }
 
+.lista-personajes img {
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+  }
+  
+
 .lista-eventos li {
     margin-left: 10px;
    width: fit-content;
+}
+
+.lista-eventos img {
+    margin-left: 20px;
+    width: 440px;
+    height: 210px;
 }
 
 .banner-pic img{
