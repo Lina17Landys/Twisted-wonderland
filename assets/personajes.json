@@ -1,0 +1,114 @@
+{
+ "Characters": [
+        { 
+            "id": 1,
+            "fullName": "Riddle Rosehearts",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/4/44/Card_Riddle_SSR_Dorm_Uniform.png/revision/latest/scale-to-width-down/1920?cb=20200430150949",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/5/5d/Card_Riddle_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20200430151122",
+            "maxHp": "7,357",
+            "maxPow": "7,142",
+            "spell1": "Flame Blast",
+            "spell2": "Fire Shot II"
+        },
+        {
+            "id": 2,
+            "fullName": "Trey Clover",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/6/6c/Card_Trey_SSR_Dorm_Uniform.png/revision/latest?cb=20200522083740",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/b/bc/Card_Trey_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20200522083741",
+            "maxHp": "11,802",
+            "maxPow": "3,480",
+            "spell1": "Aqua Wave",
+            "spell2": "Leaf Shot II"
+        },
+        {
+            "id": 3,
+            "fullName": "Cater Diamond",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/4/41/Card_Cater_SSR_Dorm_Uniform.png/revision/latest?cb=20200520090339",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/7/7a/Card_Cater_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20200520090339",
+            "maxHp": "8,935",
+            "maxPow": "4,684",
+            "spell1": "Forest Strike",
+            "spell2": "Fire Shot II"
+        },
+        {
+            "id": 4,
+            "fullName": "Rook Hunt",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/b/bf/Card_Rook_SSR_Dorm_Uniform.png/revision/latest?cb=20200914110120",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/9/94/Card_Rook_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20200914110121",
+            "maxHp": "7,461",
+            "maxPow": "5,438",
+            "spell1": "Forest Strike",
+            "spell2": "Fire Shot II"
+        },
+        {
+            "id": 5,
+            "fullName": "Jack Howl",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/d/d9/Card_Jack_SSR_Dorm_Uniform.png/revision/latest/scale-to-width-down/1920?cb=20200527213107",
+            "GroovyPic": "https://static.miraheze.org/twistedwonderlandwiki/f/fe/Card_Jack_SSR_Dorm_Uniform_Groovy.png",
+            "maxHp": "7,617",
+            "maxPow": "5,334",
+            "spell1": "Flame Blast",
+            "spell2": "Leaf Shot II"
+        },
+        {
+            "id": 6,
+            "fullName": "Azul Ashengrotto",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/8/8f/Card_Azul_SSR_Dorm_Uniform.png/revision/latest?cb=20200527052701",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/b/b1/Card_Azul_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20200527052701",
+            "maxHp": "9,089",
+            "maxPow": "4,605",
+            "spell1": " Aqua Wave",
+            "spell2": "Water Shot II"
+        },
+        {
+            "id": 7,
+            "fullName": "Jade Leech",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/1/18/Card_Jade_SSR_Dorm_Uniform.png/revision/latest?cb=20200527053853",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/8/81/Card_Jade_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20200527053853",
+            "maxHp": "10,075",
+            "maxPow": "4,181",
+            "spell1": " Aqua Wave",
+            "spell2": "Fire Shot II"
+        },
+        {
+            "id": 8,
+            "fullName": "Vil Schoenheit",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/9/91/Card_Vil_SSR_Dorm_Uniform.png/revision/latest?cb=20210128013926",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/a/a6/Card_Vil_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20210128013948",
+            "maxHp": "10,371",
+            "maxPow": "4,063",
+            "spell1": "Forest Strike",
+            "spell2": "Void Shot II"
+        },
+        {
+            "id": 9,
+            "fullName": "kalim Al Asim",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/7/77/Card_Kalim_SSR_Dorm_Uniform.png/revision/latest/scale-to-width-down/1920?cb=20200530225152",
+            "GroovyPic": "https://static.miraheze.org/twistedwonderlandwiki/e/e2/Card_Kalim_SSR_Dorm_Uniform_Groovy.png",
+            "maxHp": "8,626",
+            "maxPow": "4,846",
+            "spell1": "Aqua Wave",
+            "spell2": "Void Shot II"
+        },
+        {
+            "id": 10,
+            "fullName": "Jamil Viper",
+            "NonGroovyPic": "https://64.media.tumblr.com/09b2be47847d0ae622b3c6c4ab5b6c71/7f861828a8cdea2c-f1/s640x960/217a1930ab5503af923efe2b46c134afd6f9ab53.png",
+            "GroovyPic": "https://static.miraheze.org/twistedwonderlandwiki/f/fc/Card_Jamil_SSR_Dorm_Uniform_Groovy.png",
+            "maxHp": "7,773",
+            "maxPow": "5,230",
+            "spell1": "Zero Ray",
+            "spell2": "Fire Shot II"
+        },
+        {
+            "id": 11,
+            "fullName": "Idia Shroud",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/7/79/Card_Idia_SSR_Dorm_Uniform.png/revision/latest?cb=20220214172528",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/1/1b/Card_Idia_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20230220110324",
+            "maxHp": "11,940",
+            "maxPow": "3,441",
+            "spell1": "Flame Blast",
+            "spell2": "Void Shot II"
+        }
+    ]
+}
