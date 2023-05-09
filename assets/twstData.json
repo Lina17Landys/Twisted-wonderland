@@ -90,17 +90,6 @@
         },
         {
             "id": 9,
-            "fullName": "Vil Schoenheit",
-            "icon": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/iconos/vil%20%7C%20edgeicons.jpg?raw=true",
-            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/9/91/Card_Vil_SSR_Dorm_Uniform.png/revision/latest?cb=20210128013926",
-            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/a/a6/Card_Vil_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20210128013948",
-            "maxHp": "10,371",
-            "maxPow": "4,063",
-            "spell1": "Forest Strike",
-            "spell2": "Void Shot II"
-        },
-        {
-            "id": 10,
             "fullName": "kalim Al Asim",
             "icon": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/iconos/kalim.png?raw=true",
             "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/7/77/Card_Kalim_SSR_Dorm_Uniform.png/revision/latest/scale-to-width-down/1920?cb=20200530225152",
@@ -111,7 +100,7 @@
             "spell2": "Void Shot II"
         },
         {
-            "id": 11,
+            "id": 10,
             "fullName": "Jamil Viper",
             "icon": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/iconos/jamil.jpg?raw=true",
             "NonGroovyPic": "https://64.media.tumblr.com/09b2be47847d0ae622b3c6c4ab5b6c71/7f861828a8cdea2c-f1/s640x960/217a1930ab5503af923efe2b46c134afd6f9ab53.png",
@@ -122,7 +111,7 @@
             "spell2": "Fire Shot II"
         },
         {
-            "id": 12,
+            "id": 11,
             "fullName": "Idia Shroud",
             "icon": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/iconos/idia.jpg?raw=true",
             "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/7/79/Card_Idia_SSR_Dorm_Uniform.png/revision/latest?cb=20220214172528",
@@ -130,6 +119,17 @@
             "maxHp": "11,940",
             "maxPow": "3,441",
             "spell1": "Flame Blast",
+            "spell2": "Void Shot II"
+        },
+        {
+            "id": 12,
+            "fullName": "Vil Schoenheit",
+            "icon": "https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/iconos/vil%20%7C%20edgeicons.jpg?raw=true",
+            "NonGroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/9/91/Card_Vil_SSR_Dorm_Uniform.png/revision/latest?cb=20210128013926",
+            "GroovyPic": "https://static.wikia.nocookie.net/twisted-wonderland/images/a/a6/Card_Vil_SSR_Dorm_Uniform_Groovy.png/revision/latest?cb=20210128013948",
+            "maxHp": "10,371",
+            "maxPow": "4,063",
+            "spell1": "Forest Strike",
             "spell2": "Void Shot II"
         }
     ],
