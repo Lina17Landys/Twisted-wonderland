@@ -1,19 +1,31 @@
-const myImage = document.getElementById('myImage');
-const changeImageButton = document.getElementById('changeImageButton');
-const image1 = 'https://static.wikia.nocookie.net/twisted-wonderland/images/3/38/Card_Malleus_SSR_Dorm_Uniform.png/revision/latest/scale-to-width-down/1920?cb=20230308094614';
-const image2 = 'https://static.miraheze.org/twistedwonderlandwiki/9/9c/Card_Malleus_SSR_Dorm_Uniform_Groovy.png';
-let currentImage = image1;
+fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/twstData.json')
+  .then(response => response.json())
+  .then(data => {
+    const personajesDiv = document.getElementById('personajes');
+    const listaPersonajes = personajesDiv.querySelector('.lista-personajes');
 
-changeImageButton.addEventListener('click', () => {
-    if (currentImage === image1) {
-        myImage.src = image2;
-        myImage.alt = 'Imagen 2';
-        currentImage = image2;
-    } else {
-        myImage.src = image1;
-        myImage.alt = 'Imagen 1';
-        currentImage = image1;
-    }
-});
+    data.characters.forEach(personaje => {
+      const li = document.createElement('li');
 
+      const nombre = document.createElement('h3');
+      nombre.textContent = personaje.fullName;
+      li.appendChild(nombre);
 
+      const imagen = document.createElement('img');
+      imagen.src = personaje.NonGroovyPic;
+      li.appendChild(imagen);
+
+      const boton = document.createElement('button');
+      boton.textContent = 'Cambiar imagen';
+      boton.addEventListener('click', () => {
+        if (imagen.src === personaje.NonGroovyPic) {
+          imagen.src = personaje.GroovyPic;
+        } else {
+          imagen.src = personaje.NonGroovyPic;
+        }
+      });
+      li.appendChild(boton);
+
+      listaPersonajes.appendChild(li);
+    });
+  });

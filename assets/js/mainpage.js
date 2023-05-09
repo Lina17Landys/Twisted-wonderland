@@ -13,12 +13,9 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
       const icon = document.createElement('img');
       icon.src = personaje.icon;
       personajesDiv.querySelector('.lista-personajes').appendChild(icon);
+      icon.addEventListener('click', () => {
+        window.location.href = './object.html';
+      });
     });
     
   });
-
-
-
-
-
-
