@@ -20,24 +20,20 @@ form.addEventListener('submit', (event) => {
         return;
     }
     
-
     actualizarInterfazUsuario(nombre, biografia, fotoPerfil, fotoBanner);
+    alert('Su perfil se actualizó correctamente');
 });
 
 const actualizarInterfazUsuario = (nombre, biografia, fotoPerfil, fotoBanner) => {
-  const nombreElemento = document.querySelector('#nombre');
-  nombreElemento.value = nombre;
+    const nombreElemento = document.querySelector('#nombre');
+    nombreElemento.value = nombre;
 
-  const biografiaElemento = document.querySelector('#biografia');
-  biografiaElemento.value = biografia;
+    const biografiaElemento = document.querySelector('#biografia');
+    biografiaElemento.value = biografia;
 
-  const fotoPerfilElemento = document.querySelector('#foto-perfil-preview');
-  const fotoPerfilURL = URL.createObjectURL(fotoPerfil);
-  fotoPerfilElemento.src = fotoPerfilURL;
+    const fotoPerfilElemento = document.querySelector('#foto-perfil-preview');
+    const fotoPerfilURL = URL.createObjectURL(fotoPerfil);
 
-  const fotoBannerElemento = document.querySelector('#foto-banner-preview');
-  const fotoBannerURL = URL.createObjectURL(fotoBanner);
-  fotoBannerElemento.src = fotoBannerURL;
+    const fotoBannerElemento = document.querySelector('#foto-banner-preview');
+    const fotoBannerURL = URL.createObjectURL(fotoBanner);
 };
-
-
