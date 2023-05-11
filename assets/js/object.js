@@ -1,20 +1,19 @@
-// Obtener el ID del personaje desde la URL
-const urlParams = new URLSearchParams(window.location.search);
-const characterId = urlParams.get('id');
 
-// Obtener los personajes desde la variable global compartida
-const characters = window.twstCharacters;
+const render = async () => {
+  try {
+    const data = await obtenerPersonaje();
+    const contenedor = document.querySelector(".seccion");
 
-// Buscar el personaje correspondiente al ID proporcionado
-const personaje = characters.find(character => character.id === characterId);
+    for (let personaje of data) {
+      let chara = new Personaje(personaje.imagen, personaje.nombre, personaje.id);
+      const charas = chara.render();
+      contenedor.appendChild(charas);
 
-if (personaje) {
-  // Mostrar la información del personaje en la página
-  const personajeNombre = document.getElementById('personajeNombre');
-  personajeNombre.textContent = personaje.fullName;
+      chara.addClickListener();
+    }
+  } catch (error) {
+    console.error("Error al renderizar los personajes:", error);
+  }
+};
 
-  const personajeImagen = document.getElementById('personajeImagen');
-  personajeImagen.src = personaje.NonGroovyPic;
-} else {
-  console.error('Personaje no encontrado');
-}
+render();

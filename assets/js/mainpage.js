@@ -25,7 +25,7 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
     });
 
     const characters = data.characters;
-    window.twstCharacters = characters; // Almacenar los personajes en la variable global
+    window.twstCharacters = characters; 
   })
   .catch(error => {
     console.error('Error al obtener los datos:', error);
