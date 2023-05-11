@@ -49,7 +49,6 @@ label {
     margin-bottom: 20px;
   }
   
-/* Ocultamos el input original */
 input[type="file"] {
     position: absolute;
     opacity: 0;
@@ -77,6 +76,7 @@ input[type="file"] {
 
   button[type="submit"] {
     font-family: 'GFS Didot', serif;
+    margin-top: 20px;
     width: 100px;
     height: 30px;
     border-radius: 100px;
