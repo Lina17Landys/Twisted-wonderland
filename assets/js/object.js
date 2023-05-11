@@ -1,31 +1,20 @@
-fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/twstData.json')
-  .then(response => response.json())
-  .then(data => {
-    const personajesDiv = document.getElementById('personajes');
-    const listaPersonajes = personajesDiv.querySelector('.lista-personajes');
+// Obtener el ID del personaje desde la URL
+const urlParams = new URLSearchParams(window.location.search);
+const characterId = urlParams.get('id');
 
-    data.characters.forEach(personaje => {
-      const li = document.createElement('li');
+// Obtener los personajes desde la variable global compartida
+const characters = window.twstCharacters;
 
-      const nombre = document.createElement('h3');
-      nombre.textContent = personaje.fullName;
-      li.appendChild(nombre);
+// Buscar el personaje correspondiente al ID proporcionado
+const personaje = characters.find(character => character.id === characterId);
 
-      const imagen = document.createElement('img');
-      imagen.src = personaje.NonGroovyPic;
-      li.appendChild(imagen);
+if (personaje) {
+  // Mostrar la información del personaje en la página
+  const personajeNombre = document.getElementById('personajeNombre');
+  personajeNombre.textContent = personaje.fullName;
 
-      const boton = document.createElement('button');
-      boton.textContent = 'Cambiar imagen';
-      boton.addEventListener('click', () => {
-        if (imagen.src === personaje.NonGroovyPic) {
-          imagen.src = personaje.GroovyPic;
-        } else {
-          imagen.src = personaje.NonGroovyPic;
-        }
-      });
-      li.appendChild(boton);
-
-      listaPersonajes.appendChild(li);
-    });
-  });
+  const personajeImagen = document.getElementById('personajeImagen');
+  personajeImagen.src = personaje.NonGroovyPic;
+} else {
+  console.error('Personaje no encontrado');
+}
