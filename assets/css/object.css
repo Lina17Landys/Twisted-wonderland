@@ -62,34 +62,37 @@ body {
     height: 90px;
 }
 
-/* Estilos para el contenedor de información del personaje */
-#personaje-info {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-  }
-  
-  #personaje-info img {
-    width: 200px;
-    height: auto;
-    margin-top: 10px;
-  }
-  
-  #personaje-info button {
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 5px 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #personaje-info button:hover {
-    background-color: #3e8e41;
-  }
-  
+#characterDetails {
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: rgba(225, 182, 137, 1);
+    border: solid 3px #FFFCD9;
+    border-radius: 50px;
+    width: 900px;
+    height: 500px;
+}
+
+#characterDetails img {
+    border-radius: 30px;
+    width: 520px;
+    height: 290px;
+    margin-left: 40px;
+    margin-top: 90px;
+}
+
+h1 {
+    font-family: 'Gloock', serif;
+    position: relative;
+    z-index: 1;
+    bottom: 380px;
+margin-left: 50px;
+}
+
+p {
+    font-family: 'GFS Didot', serif;
+    font-size: larger;
+    position: relative;
+    z-index: 2;
+    margin-left: 600px;
+    bottom: 320px;
+}

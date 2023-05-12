@@ -30,7 +30,7 @@ const getParameterByName = (name, url) => {
         img.src = selectedCharacter.NonGroovyPic;
         characterDetails.appendChild(img);
 
-        const fullName = document.createElement('p');
+        const fullName = document.createElement('h1');
         fullName.textContent = "Full Name: " + selectedCharacter.fullName;
         characterDetails.appendChild(fullName);
 
