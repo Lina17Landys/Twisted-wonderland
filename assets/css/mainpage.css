@@ -66,16 +66,35 @@ h1 {
     font-family: 'Gloock', serif;
     color: #fff;
     font-size: 20px;
+    margin-left: 20px;
 }
 
 #eventsContainer {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
+    max-height: 600px; 
+    overflow: auto; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    max-width: 90%; 
+  }
+
+#eventsContainer img {
+    margin-left: 10px;
+    width: 600px;
+    height: 190px;
 }
 
 #charactersContainer {
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
+    max-height: 600px; 
+    overflow: auto; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    max-width: 90%; 
 }
 
 #charactersContainer img {
