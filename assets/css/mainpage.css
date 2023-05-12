@@ -62,59 +62,24 @@ body {
 }
 
 
-h2 {
+h1 {
     font-family: 'Gloock', serif;
     color: #fff;
     font-size: 20px;
 }
 
-.seccion {
-    margin-top: 50px;
-    margin-left: 10px;
-}
-
-.lista-eventos {
-    list-style-type: none;
+#eventsContainer {
     display: flex;
-    overflow-x: scroll;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: -35px;
+    flex-direction: row;
 }
 
-.lista-personajes {
-    list-style-type: none;
+#charactersContainer {
     display: flex;
-    overflow-x: scroll;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: -35px;
+    flex-direction: row;
 }
 
-.lista-personajes img {
+#charactersContainer img {
     width: 200px;
     height: 200px;
     margin-left: 20px;
-  }
-  
-
-.lista-eventos li {
-    margin-left: 10px;
-   width: fit-content;
-}
-
-.lista-eventos img {
-    margin-left: 20px;
-    width: 440px;
-    height: 210px;
-}
-
-.banner-pic img{
-    margin-left: 10px;
-}
-
-.pic-icon img {
-    width: 200px;
-    height: 200px;
-    margin-left: 10px;
 }
