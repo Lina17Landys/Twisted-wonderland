@@ -1,4 +1,3 @@
-// Función para obtener parámetros de la URL
 const getParameterByName = (name, url) => {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -9,21 +8,16 @@ const getParameterByName = (name, url) => {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
   };
 
-  // Obtener el índice del personaje seleccionado de los parámetros de la URL
   const selectedIndex = parseInt(getParameterByName('index'));
 
-  // Cargar los datos del archivo JSON utilizando fetch
   fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/twstData.json')
     .then(response => response.json())
     .then(data => {
-      // Obtener los personajes del objeto JSON
       const characters = data.characters;
 
-      // Verificar si el índice seleccionado es válido
       if (selectedIndex >= 0 && selectedIndex < characters.length) {
         const selectedCharacter = characters[selectedIndex];
 
-        // Mostrar los detalles del personaje seleccionado
         const characterDetails = document.getElementById('characterDetails');
 
         const img = document.createElement('img');
