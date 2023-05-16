@@ -15,9 +15,8 @@
     <div class="searchBar">
         <div class="box">
             <i class="fa fa-search" aria-hidden="true"></i>
-            <input id="searchInput" type="text" name="" placeholder="Search...">
-        </div>
-        <div id="noResultsMessage" class="hidden">No se encontraron resultados.</div>
+            <input id="searchBar" onkeyup="searchItem()" type="text"
+            name="search" placeholder="Search..">        </div>
         <div class="icon">
             <a href="user.html"><img class="icon" src="assets/iconos/UserIcon.PNG"></a>
             <a href="setting.html"><img class="icon" src="assets/iconos/SettingIcon.PNG"></a>
@@ -26,10 +25,10 @@
         </div>
     </div>
     <h1>On going events</h1>
-      <center> <div id="eventsContainer"> 
+      <center> <div class="events" id="eventsContainer"> 
        </div></center>
        <h1>Popular characters</h1>
-  <center><div id="charactersContainer">
+  <center><div class="characters" id="charactersContainer">
   </div></center>
 
 
