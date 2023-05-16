@@ -25,7 +25,7 @@ const getParameterByName = (name, url) => {
         characterDetails.appendChild(img);
 
         const fullName = document.createElement('h1');
-        fullName.textContent = "Full Name: " + selectedCharacter.fullName;
+        fullName.textContent = selectedCharacter.fullName;
         characterDetails.appendChild(fullName);
 
         const maxPow = document.createElement('p');
