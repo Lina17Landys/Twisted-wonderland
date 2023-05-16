@@ -149,6 +149,28 @@ form button {
     margin-bottom: 25px;
 }
 
+.vil-banner, .cater-banner img {
+    transform: translateX(0px);
+    animation: float 3s ease-out infinite;
+}
+
+.cater-banner, .vil-banner img {
+    transform: translateX(1px);
+    animation: float 4s ease-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .star {
     width: 150px;
     height: 150px;
