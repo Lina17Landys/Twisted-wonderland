@@ -25,28 +25,28 @@
             <a href="signup.html" class="nav-link">Sign Up</a>
         </nav>
     </header>
-    <form action="/my-handling-form-page" method="post">
+    <form id="myForm" method="post">
         <center>
             <h1 class="tt2">Send us a message!</h1>
         </center>
         <ul>
             <li>
                 <label for="name">Name</label>
-                <input type="text" id="name" name="user_name" />
+                <input type="text" id="name" name="user_name"/>
             </li>
             <li>
                 <label for="mail">E-mail</label>
-                <input type="email" id="mail" name="user_email" />
+                <input type="email" id="mail" name="user_email"/>
             </li>
             <li>
-                <label for="msg">Mensagge</label>
+                <label for="msg">Message</label>
                 <textarea id="msg" name="user_message"></textarea>
             </li>
-            <center><button class="boton1">Send</button></center>
+            <center><button class="boton1" type="submit">Send</button></center>
         </ul>
     </form>
-    <img src="assets/iconos/pluma.png" class="pluma"> 
-    
+    <img src="assets/iconos/pluma.png" class="pluma">
+
     <div class="form2">
         <ul>
             <li class="form2ul">
@@ -63,10 +63,11 @@
             </li>
         </ul>
     </div>
-<div>
-    <h1 class="formh1">Send us a message</h1>
-</div>
-<img src="assets/imagenes/grim.png" class="grim">
+    <div>
+        <h1 class="formh1">Send us a message</h1>
+    </div>
+    <img src="assets/imagenes/grim.png" class="grim">
 </body>
+<script type="text/javascript" src="assets/js/message.js"></script>
 
 </html>
