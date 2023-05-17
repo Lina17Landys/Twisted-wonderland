@@ -44,7 +44,7 @@ body {
     background-color: rgba(225, 182, 137, 1);
 }
 
-.icon {
+.icon-bar {
     display: flex;
     align-items: center;
     margin-left: 35px;
@@ -96,3 +96,14 @@ p {
     margin-left: 600px;
     bottom: 320px;
 }
+
+  .icon {
+    position: relative;
+    z-index: 4;
+  top: -350px;
+   max-width: 110px;
+   max-height: 90px;
+  left: 540px;
+  }
+  
+  
