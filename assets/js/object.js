@@ -14,60 +14,61 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
   .then(response => response.json())
   .then(data => {
     const characters = data.characters;
+    const selectedCharacter = characters[selectedIndex];
 
-    if (selectedIndex >= 0 && selectedIndex < characters.length) {
-      const selectedCharacter = characters[selectedIndex];
+    const characterDetails = document.getElementById('characterDetails');
 
-      const characterDetails = document.getElementById('characterDetails');
+    const createDetailElement = (tagName, textContent) => {
+      const element = document.createElement(tagName);
+      element.textContent = textContent;
+      characterDetails.appendChild(element);
+    };
 
-      const img = document.createElement('img');
-      img.src = selectedCharacter.NonGroovyPic;
-      characterDetails.appendChild(img);
+    const createIconElement = (src) => {
+      const icon = document.createElement('img');
+      icon.src = src;
+      icon.classList.add('icon');
+      return icon;
+    };
 
-      const fullName = document.createElement('h1');
-      fullName.textContent = selectedCharacter.fullName;
-      characterDetails.appendChild(fullName);
+    const img = document.createElement('img');
+    img.src = selectedCharacter.NonGroovyPic;
+    characterDetails.appendChild(img);
 
-      const maxPow = document.createElement('p');
-      maxPow.textContent = "Max Power: " + selectedCharacter.maxPow;
-      characterDetails.appendChild(maxPow);
+    createDetailElement('h1', selectedCharacter.fullName);
+    createDetailElement('p', "Max Power: " + selectedCharacter.maxPow);
+    createDetailElement('p', "Max HP: " + selectedCharacter.maxHp);
+    createDetailElement('p', "Spell 1: " + selectedCharacter.spell1);
+    createDetailElement('p', "Spell 2: " + selectedCharacter.spell2);
 
-      const maxHp = document.createElement('p');
-      maxHp.textContent = "Max HP: " + selectedCharacter.maxHp;
-      characterDetails.appendChild(maxHp);
+    const toggleImage = () => {
+      if (img.src.includes(selectedCharacter.NonGroovyPic)) {
+        img.src = selectedCharacter.GroovyPic;
+      } else {
+        img.src = selectedCharacter.NonGroovyPic;
+      }
+    };
 
-      const spell1 = document.createElement('p');
-      spell1.textContent = "Spell 1: " + selectedCharacter.spell1;
-      characterDetails.appendChild(spell1);
+    const ImageButton = document.createElement('button');
+    ImageButton.textContent = "Groovy!";
+    ImageButton.addEventListener('click', toggleImage);
+    characterDetails.appendChild(ImageButton);
 
-      const spell2 = document.createElement('p');
-      spell2.textContent = "Spell 2: " + selectedCharacter.spell2;
-      characterDetails.appendChild(spell2);
+    const bookmarkEmptyIcon = createIconElement('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png');
+    bookmarkEmptyIcon.addEventListener('click', () => {
+      bookmarkEmptyIcon.src = bookmarkEmptyIcon.src.includes('empty') ?
+        'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmarkfull%20icon.png' :
+        'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png';
+    });
+    characterDetails.appendChild(bookmarkEmptyIcon);
 
-      const bookmarkEmptyIcon = document.createElement('img');
-      bookmarkEmptyIcon.src = 'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png';
-      bookmarkEmptyIcon.classList.add('icon');
-      bookmarkEmptyIcon.addEventListener('click', () => {
-        if (bookmarkEmptyIcon.src.includes('empty')) {
-          bookmarkEmptyIcon.src = 'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmarkfull%20icon.png';
-        } else {
-          bookmarkEmptyIcon.src = 'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png';
-        }
-      });
-      characterDetails.appendChild(bookmarkEmptyIcon);
+    const heartEmptyIcon = createIconElement('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png');
+    heartEmptyIcon.addEventListener('click', () => {
+      heartEmptyIcon.src = heartEmptyIcon.src.includes('empty') ?
+        'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20full%20icon.png' :
+        'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png';
+    });
+    characterDetails.appendChild(heartEmptyIcon);
 
-      const heartEmptyIcon = document.createElement('img');
-      heartEmptyIcon.src = 'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png';
-      heartEmptyIcon.classList.add('icon');
-      heartEmptyIcon.addEventListener('click', () => {
-        if (heartEmptyIcon.src.includes('empty')) {
-          heartEmptyIcon.src = 'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20full%20icon.png';
-        } else {
-          heartEmptyIcon.src = 'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png';
-        }
-      });
-      characterDetails.appendChild(heartEmptyIcon);
-
-    }
-  })
+  });
 

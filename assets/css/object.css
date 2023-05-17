@@ -2,10 +2,7 @@ body {
     background-color: #1D1D1F;
     font-family: 'GFS Didot', serif;
     margin: 0;
-    overflow-y: none;
-    overflow-y: hidden;
-    overflow-x: none;
-    overflow-x: hidden;
+
 }
 
 
@@ -85,7 +82,7 @@ h1 {
     position: relative;
     z-index: 1;
     bottom: 380px;
-margin-left: 50px;
+    margin-left: 50px;
 }
 
 p {
@@ -97,13 +94,25 @@ p {
     bottom: 320px;
 }
 
-  .icon {
+.icon {
     position: relative;
     z-index: 4;
-  top: -350px;
-   max-width: 110px;
-   max-height: 90px;
-  left: 540px;
-  }
-  
-  
+    top: -350px;
+    max-width: 110px;
+    max-height: 90px;
+    left: 390px;
+}
+
+button {
+    font-family: 'GFS Didot', serif;
+    color: #fff;
+    background-color: rgba(225, 182, 137, 1);
+    border: solid 3px #FFFCD9;
+    border-radius: 20px;
+    height: 50px;
+    width: 150px;
+    position: relative;
+    z-index: 5;
+    bottom: 370px;
+    left: 40px;
+}
