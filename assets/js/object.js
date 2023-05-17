@@ -44,7 +44,6 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
       spell2.textContent = "Spell 2: " + selectedCharacter.spell2;
       characterDetails.appendChild(spell2);
 
-      // Crea el icono de marcador vacío
       const bookmarkEmptyIcon = document.createElement('img');
       bookmarkEmptyIcon.src = 'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png';
       bookmarkEmptyIcon.classList.add('icon');
@@ -57,7 +56,6 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
       });
       characterDetails.appendChild(bookmarkEmptyIcon);
 
-      // Crea el icono de corazón vacío
       const heartEmptyIcon = document.createElement('img');
       heartEmptyIcon.src = 'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png';
       heartEmptyIcon.classList.add('icon');
