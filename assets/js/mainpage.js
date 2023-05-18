@@ -2,7 +2,7 @@
     return fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/twstData.json')
       .then(response => response.json())
       .catch(error => {
-        console.error('Error loading JSON:', error);
+        console.error('Error', error);
         throw error;
       });
   };
