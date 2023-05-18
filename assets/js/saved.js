@@ -2,10 +2,10 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
   .then(response => response.json())
   .then(data => {
     const characters = data.characters;
-    const charactersContainer = document.getElementById('likeContainer');
+    const charactersContainer = document.getElementById('saveContainer');
 
     characters.forEach((character, index) => {
-      if (index % 2 === 0) {
+      if (index % 2 !== 0) {
         const icon = document.createElement('img');
         icon.src = character.icon;
         icon.addEventListener('click', () => {

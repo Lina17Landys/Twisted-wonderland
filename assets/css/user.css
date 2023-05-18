@@ -80,23 +80,49 @@ p {
     bottom: 400px;
 }
 
-
-.seccion {
+#saveContainer {
     margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.lista-eventos {
-    list-style-type: none;
     display: flex;
-    overflow-x: scroll;
-    align-items: center;
+    flex-direction: row;
+    max-height: 600px; 
+    overflow: auto; 
+    max-width: 90%; 
 }
 
-.lista-eventos li {
+#saveContainer img {
+    width: 150px;
+    height: 150px;
     margin-left: 10px;
-   width: fit-content;
+}
+
+#likeContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    max-height: 600px; 
+    overflow: auto; 
+    max-width: 90%; 
+}
+
+#likeContainer img {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+#allCharas {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    max-height: 600px; 
+    overflow: auto; 
+    max-width: 90%; 
+}
+
+#allCharas img {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
 }
 
 .banner-pic img{
