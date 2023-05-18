@@ -31,5 +31,5 @@
       });
     })
     .catch(error => {
-      console.error('Error loading JSON:', error);
+      console.error('Errores', error);
     });

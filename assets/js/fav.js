@@ -16,5 +16,5 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
     });
   })
   .catch(error => {
-    console.error('Error loading JSON:', error);
+    console.error('Error', error);
   });
