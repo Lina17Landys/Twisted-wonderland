@@ -43,13 +43,13 @@ export const cargarFavoritos = async () => {
     const personajes = await cargarPersonajes();
 
     for (const personaje of personajes) {
-        if(favoritosIds.includes(personaje.id)) {
+        if (favoritosIds.includes(personaje.id)) {
             const icon = document.createElement("img");
             icon.src = personaje.icon;
             icon.classList.add("icon");
-            divFavoritos.appendChild(image);
+            divFavoritos.appendChild(icon);
 
-            image.addClickListener("click", () => {
+            icon.addEventListener("click", () => {
                 eliminarFavorito(personaje.id);
                 cargarFavoritos();
             })

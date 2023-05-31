@@ -70,8 +70,7 @@ export const actualizarLista = () => {
   
       for (const persona of personasArray) {
         const mensaje = `${persona.correo} ${persona.contrasena}`;
-        alert(`Usuario creado correctamente`);
-      }
+       }
     }
   };
   

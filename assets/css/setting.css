@@ -114,3 +114,16 @@ a.password:hover {
 top: 470px; 
 left: 200px;
 }
+
+#cerrar {
+  font-family: 'GFS Didot', serif;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  border-radius: 100px;
+  border: none;
+  background-color: #FFFCD9;
+  color: #1D1D1F;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,3 +1,5 @@
+import { estaEnSesion, cerrarSesion } from "./session.js";
+
 const form = document.querySelector('form');
 
 form.addEventListener('submit', (event) => {
@@ -19,21 +21,34 @@ form.addEventListener('submit', (event) => {
         alert('Por favor, selecciona ambas fotos.');
         return;
     }
-    
+
     actualizarInterfazUsuario(nombre, biografia, fotoPerfil, fotoBanner);
     alert('Su perfil se actualizó correctamente');
 });
 
-const actualizarInterfazUsuario = (nombre, biografia, fotoPerfil, fotoBanner) => {
-    const nombreElemento = document.querySelector('#nombre');
-    nombreElemento.value = nombre;
+const render = async () => {
+    estaEnSesion();
 
-    const biografiaElemento = document.querySelector('#biografia');
-    biografiaElemento.value = biografia;
+    const botonCerrar = document.querySelector("#cerrar");
+    botonCerrar.addEventListener("click", () => {
+        cerrarSesion();
+    });
+};
+
+const actualizarInterfazUsuario = (nombre, biografia, fotoPerfil, fotoBanner) => {
+    const nombreElemento = document.querySelector('#nombre-preview');
+    nombreElemento.textContent = nombre;
+
+    const biografiaElemento = document.querySelector('#biografia-preview');
+    biografiaElemento.textContent = biografia;
 
     const fotoPerfilElemento = document.querySelector('#foto-perfil-preview');
     const fotoPerfilURL = URL.createObjectURL(fotoPerfil);
+    fotoPerfilElemento.src = fotoPerfilURL;
 
     const fotoBannerElemento = document.querySelector('#foto-banner-preview');
     const fotoBannerURL = URL.createObjectURL(fotoBanner);
+    fotoBannerElemento.src = fotoBannerURL;
 };
+
+window.onload = render;
