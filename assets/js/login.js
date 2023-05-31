@@ -1,3 +1,22 @@
+import { validarUsuario } from "./session.js";
+
+const renderLogin = async () => {
+  const formulario = document.querySelector("#formularioLogIn");
+  formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const correo = event.target.correo.value;
+    const contrasena = event.target.contrasena.value;
+
+    validarUsuario(correo, contrasena);
+  });
+
+};
+
+window.onload = () => {
+  renderLogin();
+};
+
 const USUARIOS = "usuarios";
 
 const buscarUsuario = (nombre) => {
@@ -24,7 +43,7 @@ const guardarUsuario = (usuario) => {
   localStorage.setItem(USUARIOS, JSON.stringify(usuariosJSON));
 };
 
-const render = async () => {
+const renderRegistro = async () => {
   const form = document.querySelector("#registro");
 
   form.addEventListener("submit", (event) => {
@@ -52,5 +71,6 @@ const render = async () => {
   });
 };
 
-render();
-
+window.onload = () => {
+  renderRegistro();
+};

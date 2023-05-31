@@ -1,3 +1,25 @@
+import { registrarPersona, actualizarLista } from "./session.js"
+
+const render = async () => {
+    actualizarLista();
+
+    const formulario = document.querySelector("#form");
+    formulario.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        registrarPersona(email, password);
+        actualizarLista();
+    })
+
+}
+
+window.onload = render;
+
+
+
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
