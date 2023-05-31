@@ -5,16 +5,11 @@ const renderLogin = async () => {
   formulario.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const correo = event.target.correo.value;
-    const contrasena = event.target.contrasena.value;
+    const username = event.target.username.value;
+    const password = event.target.password.value;
 
-    validarUsuario(correo, contrasena);
+    validarUsuario(username, password);
   });
-
-};
-
-window.onload = () => {
-  renderLogin();
 };
 
 const USUARIOS = "usuarios";
@@ -72,5 +67,5 @@ const renderRegistro = async () => {
 };
 
 window.onload = () => {
-  renderRegistro();
+  renderLogin();
 };
