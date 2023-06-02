@@ -106,3 +106,16 @@ h1 {
     height: 200px;
     margin-left: 20px;
 }
+
+.characters i {
+    margin-right: 5px;
+    color:#fff;
+  }
+
+  span {
+    color: white;
+  }
+
+  p {
+    color: #fff;
+  }
