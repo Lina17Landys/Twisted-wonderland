@@ -1,11 +1,10 @@
 const searchItem = () => {
-    const input = document.getElementById("searchBar").value.toLowerCase();  // Obtiene el valor del campo de búsqueda en minúsculas
-    const charactersContainer = document.getElementById("charactersContainer");  // Obtiene el contenedor de los personajes
+    const input = document.getElementById("searchBar").value.toLowerCase();  
+    const charactersContainer = document.getElementById("charactersContainer");  
 
     fetch("https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/twstData.json")
       .then(response => response.json())
       .then(data => {
-        // Limpia el contenedor de personajes antes de realizar una nueva búsqueda
         charactersContainer.innerHTML = "";
 
         const characters = data.characters;
