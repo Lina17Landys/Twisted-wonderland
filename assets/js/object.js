@@ -67,8 +67,9 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
       heartEmptyIcon.src = heartEmptyIcon.src.includes('empty') ?
         'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20full%20icon.png' :
         'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png';
+
+      const character = new Personaje(selectedIndex.toString(), heartEmptyIcon.src);
+      character.addClickListener();
     });
     characterDetails.appendChild(heartEmptyIcon);
-
   });
-

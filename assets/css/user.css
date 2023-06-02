@@ -95,7 +95,7 @@ p {
     margin-left: 10px;
 }
 
-#likeContainer {
+#favCharacters {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -104,7 +104,7 @@ p {
     max-width: 90%; 
 }
 
-#likeContainer img {
+#favCharacters img {
     width: 150px;
     height: 150px;
     margin-left: 10px;
