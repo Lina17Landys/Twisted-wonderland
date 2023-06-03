@@ -54,36 +54,57 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
     ImageButton.addEventListener('click', toggleImage);
     characterDetails.appendChild(ImageButton);
 
-    const bookmarkEmptyIcon = createIconElement('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png');
+    class IconElement {
+      constructor(src) {
+        this.element = document.createElement('img');
+        this.element.src = src;
+        this.element.classList.add('icon');
+      }
+    
+      appendTo(parentElement) {
+        parentElement.appendChild(this.element);
+      }
+    
+      addEventListener(event, callback) {
+        this.element.addEventListener(event, callback);
+      }
+    
+      setSource(src) {
+        this.element.src = src;
+      }
+    }
+    
+    const bookmarkEmptyIcon = new IconElement('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png');
     bookmarkEmptyIcon.addEventListener('click', () => {
-      bookmarkEmptyIcon.src = bookmarkEmptyIcon.src.includes('empty') ?
+      bookmarkEmptyIcon.setSource(bookmarkEmptyIcon.element.src.includes('empty') ?
         'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmarkfull%20icon.png' :
-        'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png';
-
-      const savedIcon = selectedCharacter.icon; 
-
+        'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png'
+      );
+    
+      const savedIcon = selectedCharacter.icon;
+    
       const savedIcons = localStorage.getItem('savedIcons') ? JSON.parse(localStorage.getItem('savedIcons')) : [];
       if (!savedIcons.includes(savedIcon)) {
         savedIcons.push(savedIcon);
       }
       localStorage.setItem('savedIcons', JSON.stringify(savedIcons));
     });
-
-    characterDetails.appendChild(bookmarkEmptyIcon);
-
-
-    const heartEmptyIcon = createIconElement('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png');
+    
+    bookmarkEmptyIcon.appendTo(characterDetails);
+    
+    
+    const heartEmptyIcon = new IconElement('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png');
     heartEmptyIcon.addEventListener('click', () => {
-      heartEmptyIcon.src = heartEmptyIcon.src.includes('empty') ?
+      heartEmptyIcon.setSource(heartEmptyIcon.element.src.includes('empty') ?
         'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20full%20icon.png' :
-        'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png';
-
+        'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png'
+      );
+    
       const favorites = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : [];
-
-      if (heartEmptyIcon.src.includes('full')) {
+    
+      if (heartEmptyIcon.element.src.includes('full')) {
         if (!favorites.includes(selectedCharacter.icon)) {
           favorites.push(selectedCharacter.icon);
-
         }
       } else {
         const index = favorites.indexOf(selectedCharacter.icon);
@@ -91,11 +112,12 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
           favorites.splice(index, 1);
         }
       }
-
+    
       localStorage.setItem('favorites', JSON.stringify(favorites));
     });
-    characterDetails.appendChild(heartEmptyIcon);
-  });
+    
+    heartEmptyIcon.appendTo(characterDetails);
+  })    
 
 
 
