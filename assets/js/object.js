@@ -59,8 +59,18 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
       bookmarkEmptyIcon.src = bookmarkEmptyIcon.src.includes('empty') ?
         'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmarkfull%20icon.png' :
         'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png';
+
+      const savedIcon = selectedCharacter.icon; 
+
+      const savedIcons = localStorage.getItem('savedIcons') ? JSON.parse(localStorage.getItem('savedIcons')) : [];
+      if (!savedIcons.includes(savedIcon)) {
+        savedIcons.push(savedIcon);
+      }
+      localStorage.setItem('savedIcons', JSON.stringify(savedIcons));
     });
+
     characterDetails.appendChild(bookmarkEmptyIcon);
+
 
     const heartEmptyIcon = createIconElement('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png');
     heartEmptyIcon.addEventListener('click', () => {
@@ -73,7 +83,7 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
       if (heartEmptyIcon.src.includes('full')) {
         if (!favorites.includes(selectedCharacter.icon)) {
           favorites.push(selectedCharacter.icon);
-          
+
         }
       } else {
         const index = favorites.indexOf(selectedCharacter.icon);
@@ -86,6 +96,6 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
     });
     characterDetails.appendChild(heartEmptyIcon);
   });
-  
+
 
 
