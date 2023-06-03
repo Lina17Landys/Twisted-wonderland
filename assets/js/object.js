@@ -67,6 +67,25 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
       heartEmptyIcon.src = heartEmptyIcon.src.includes('empty') ?
         'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20full%20icon.png' :
         'https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/heart%20empty.png';
+
+      const favorites = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : [];
+
+      if (heartEmptyIcon.src.includes('full')) {
+        if (!favorites.includes(selectedCharacter.icon)) {
+          favorites.push(selectedCharacter.icon);
+          
+        }
+      } else {
+        const index = favorites.indexOf(selectedCharacter.icon);
+        if (index !== -1) {
+          favorites.splice(index, 1);
+        }
+      }
+
+      localStorage.setItem('favorites', JSON.stringify(favorites));
     });
     characterDetails.appendChild(heartEmptyIcon);
   });
+  
+
+
