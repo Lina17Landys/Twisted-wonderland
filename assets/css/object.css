@@ -116,3 +116,9 @@ button {
     bottom: 370px;
     left: 40px;
 }
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
