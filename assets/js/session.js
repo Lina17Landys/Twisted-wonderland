@@ -17,7 +17,7 @@ const usuarioExiste = (correoUsuario, contrasenaUsuario) => {
         const personasArray = JSON.parse(personas);
 
         for (const persona of personasArray) {
-            if (correoUsuario === persona.correo && contrasenaUsuario === persona.contrasena) {
+            if (correoUsuario === persona.email && contrasenaUsuario === persona.password) {
                 return true;
             }
         }
@@ -40,8 +40,8 @@ export const registrarPersona = (correoPersona, contrasenaPersona) => {
 
     if (personas === null) {
         const persona = {
-            correo: correoPersona,
-            contrasena: contrasenaPersona,
+            email: correoPersona,
+            password: contrasenaPersona,
             favoritos: []
         }
 
@@ -52,8 +52,8 @@ export const registrarPersona = (correoPersona, contrasenaPersona) => {
         const personasArray = JSON.parse(personas);
 
         const persona = {
-            correo: correoPersona,
-            contrasena: contrasenaPersona,
+            email: correoPersona,
+            password: contrasenaPersona,
             favoritos: []
         }
 
@@ -69,7 +69,7 @@ export const actualizarLista = () => {
       const personasArray = JSON.parse(personas);
   
       for (const persona of personasArray) {
-        const mensaje = `${persona.correo} ${persona.contrasena}`;
+        const mensaje = `${persona.email} ${persona.password}`;
        }
     }
   };
@@ -96,14 +96,14 @@ const existeFavorito = (ids, id) => {
 }
 
 export const agregarAFavoritos = (id) => {
-    const correo = localStorage.getItem(USUARIO);
+    const email = localStorage.getItem(USUARIO);
     const usuarios = localStorage.getItem(PERSONAS);
 
-    if (correo !== null && usuarios !== null) {
+    if (email !== null && usuarios !== null) {
         const usuariosJSON = JSON.parse(usuarios);
         
         for (const persona of usuariosJSON) {
-            if (persona.correo === correo) {
+            if (persona.email === email) {
                 if (existeFavorito(persona.favoritos, id) === false) {
                     persona.favoritos.push(id);
                 }
@@ -115,14 +115,14 @@ export const agregarAFavoritos = (id) => {
 }
 
 export const obtenerFavoritos = () => {
-    const correo = localStorage.getItem(USUARIO);
+    const email = localStorage.getItem(USUARIO);
     const usuarios = localStorage.getItem(PERSONAS);
 
-    if (correo !== null && usuarios !== null) {
+    if (email !== null && usuarios !== null) {
         const usuariosJSON = JSON.parse(usuarios);
         
         for (const persona of usuariosJSON) {
-            if (persona.correo === correo) {
+            if (persona.email === email) {
                 return persona.favoritos;
             }
         }
@@ -144,14 +144,14 @@ const filtrarFavoritos = (favoritos, id) => {
 }
 
 export const eliminarFavorito = (id) => {
-    const correo = localStorage.getItem(USUARIO);
+    const email = localStorage.getItem(USUARIO);
     const usuarios = localStorage.getItem(PERSONAS);
 
-    if (correo !== null && usuarios !== null) {
+    if (email !== null && usuarios !== null) {
         const usuariosJSON = JSON.parse(usuarios);
         
         for (const persona of usuariosJSON) {
-            if (persona.correo === correo) {
+            if (persona.email === email) {
                 persona.favoritos = filtrarFavoritos(persona.favoritos, id);
             }
         }
