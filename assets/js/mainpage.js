@@ -7,20 +7,38 @@
       });
   };
 
-  loadJSON('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/twstData.json')
-    .then(data => {
-      const events = data.events;
-      const eventsContainer = document.getElementById('eventsContainer');
 
+  // clase para cargar los objetos 
+  
+  class DataLoader {
+    constructor(url) {
+      this.url = url;
+    }
+  
+    loadJSON() {
+      return fetch(this.url)
+        .then(response => response.json())
+        .then(data => {
+          this.renderEvents(data.events);
+          this.renderCharacters(data.characters);
+        });
+    }
+  
+    renderEvents(events) {
+      const eventsContainer = document.getElementById('eventsContainer');
+      eventsContainer.innerHTML = "";
+  
       events.forEach(event => {
         const img = document.createElement('img');
         img.src = event.img;
         eventsContainer.appendChild(img);
       });
-
-      const characters = data.characters;
+    }
+  
+    renderCharacters(characters) {
       const charactersContainer = document.getElementById('charactersContainer');
-
+      charactersContainer.innerHTML = "";
+  
       characters.forEach((character, index) => {
         const icon = document.createElement('img');
         icon.src = character.icon;
@@ -29,7 +47,10 @@
         });
         charactersContainer.appendChild(icon);
       });
-    })
-    .catch(error => {
-      console.error('Errores', error);
-    });
+    }
+  }
+  
+  const dataLoader = new DataLoader('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/twstData.json');
+  dataLoader.loadJSON();
+  
+   
