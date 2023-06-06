@@ -35,22 +35,28 @@ const render = async () => {
     });
 };
 
-const actualizarInterfazUsuario = (nombre, biografia, fotoPerfil, fotoBanner) => {
-    const nombreElemento = document.querySelector('#nombre-preview');
-    nombreElemento.textContent = nombre;
-
-    const biografiaElemento = document.querySelector('#biografia-preview');
-    biografiaElemento.textContent = biografia;
-
-    const fotoPerfilElemento = document.querySelector('#foto-perfil-preview');
-    const fotoPerfilURL = URL.createObjectURL(fotoPerfil);
-    fotoPerfilElemento.src = fotoPerfilURL;
-
-    const fotoBannerElemento = document.querySelector('#foto-banner-preview');
-    const fotoBannerURL = URL.createObjectURL(fotoBanner);
-    fotoBannerElemento.src = fotoBannerURL;
-};
-
+class InterfazUsuario {
+    constructor(nombre, biografia, fotoPerfil, fotoBanner) {
+      this.nombreElemento = document.querySelector('#nombre-preview');
+      this.biografiaElemento = document.querySelector('#biografia-preview');
+      this.fotoPerfilElemento = document.querySelector('#foto-perfil-preview');
+      this.fotoBannerElemento = document.querySelector('#foto-banner-preview');
+  
+      this.actualizar(nombre, biografia, fotoPerfil, fotoBanner);
+    }
+  
+    actualizar(nombre, biografia, fotoPerfil, fotoBanner) {
+      this.nombreElemento.textContent = nombre;
+      this.biografiaElemento.textContent = biografia;
+      this.fotoPerfilElemento.src = URL.createObjectURL(fotoPerfil);
+      this.fotoBannerElemento.src = URL.createObjectURL(fotoBanner);
+    }
+  }
+  
+  const actualizarInterfazUsuario = (nombre, biografia, fotoPerfil, fotoBanner) => {
+    const interfazUsuario = new InterfazUsuario(nombre, biografia, fotoPerfil, fotoBanner);
+  };
+  
 const cerrarSesionWithoutAlert = () => {
     localStorage.removeItem("usuario");
     window.location.reload();
