@@ -141,4 +141,4 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
     };
     
     window.onload = render;
-  })    
+  });    
