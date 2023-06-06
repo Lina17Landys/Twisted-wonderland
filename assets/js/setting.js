@@ -35,6 +35,9 @@ const render = async () => {
     });
 };
 
+
+// clase para editar interfaz
+
 class InterfazUsuario {
     constructor(nombre, biografia, fotoPerfil, fotoBanner) {
       this.nombreElemento = document.querySelector('#nombre-preview');
