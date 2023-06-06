@@ -54,6 +54,10 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
     ImageButton.addEventListener('click', toggleImage);
     characterDetails.appendChild(ImageButton);
 
+
+
+    // clase para los iconos 
+
     class IconElement {
       constructor(src) {
         this.element = document.createElement('img');
@@ -73,69 +77,6 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
         this.element.src = src;
       }
     }
-    
-    const createDeleteIconElement = () => {
-      const deleteIcon = new IconElement('https://github.com/Lina17Landys/Twisted-wonderland/blob/master/assets/iconos/cerrar%20icono.png?raw=true');
-      deleteIcon.element.classList.add('delete-icon');
-      return deleteIcon;
-    };
-    
-    document.addEventListener('DOMContentLoaded', () => {
-      const saveContainer = document.getElementById('saveContainer');
-      const favCharacters = document.getElementById('favCharacters');
-    
-      const savedIcons = localStorage.getItem('savedIcons') ? JSON.parse(localStorage.getItem('savedIcons')) : [];
-    
-      savedIcons.forEach((iconSrc, index) => {
-        const iconContainer = document.createElement('div');
-        iconContainer.classList.add('icon-container');
-    
-        const icon = new IconElement(iconSrc);
-    
-        const deleteIcon = createDeleteIconElement();
-    
-        icon.appendTo(iconContainer);
-        deleteIcon.appendTo(iconContainer);
-    
-        saveContainer.appendChild(iconContainer);
-    
-        deleteIcon.addEventListener('click', () => {
-          savedIcons.splice(index, 1);
-          localStorage.setItem('savedIcons', JSON.stringify(savedIcons));
-          iconContainer.remove();
-        });
-    
-        icon.addEventListener('click', () => {
-          window.location.href = `object.html?index=${index}`;
-        });
-      });
-    
-      const favIcons = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : [];
-    
-      favIcons.forEach((iconSrc, index) => {
-        const iconContainer = document.createElement('div');
-        iconContainer.classList.add('icon-container');
-    
-        const icon = new IconElement(iconSrc);
-    
-        const deleteIcon = createDeleteIconElement();
-    
-        icon.appendTo(iconContainer);
-        deleteIcon.appendTo(iconContainer);
-    
-        favCharacters.appendChild(iconContainer);
-    
-        deleteIcon.addEventListener('click', () => {
-          favIcons.splice(index, 1);
-          localStorage.setItem('favorites', JSON.stringify(favIcons));
-          iconContainer.remove();
-        });
-    
-        icon.addEventListener('click', () => {
-          window.location.href = `object.html?index=${index}`;
-        });
-      });
-    });
     
     const bookmarkEmptyIcon = new IconElement('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/assets/iconos/bookmark%20empty%20icon.png');
     bookmarkEmptyIcon.addEventListener('click', () => {
@@ -179,4 +120,25 @@ fetch('https://raw.githubusercontent.com/Lina17Landys/Twisted-wonderland/master/
       localStorage.setItem('favorites', JSON.stringify(favorites));
     });
     
-    heartEmptyIcon.appendTo(characterDetails)})
+    heartEmptyIcon.appendTo(characterDetails);
+    
+    const render = async () => {
+      estaEnSesion();
+      limpiarContenedores();
+    };
+    
+    const limpiarContenedores = () => {
+      const saveContainer = document.querySelector('#saveContainer');
+      const favCharacters = document.querySelector('#favCharacters');
+    
+      while (saveContainer.firstChild) {
+        saveContainer.removeChild(saveContainer.firstChild);
+      }
+    
+      while (favCharacters.firstChild) {
+        favCharacters.removeChild(favCharacters.firstChild);
+      }
+    };
+    
+    window.onload = render;
+  })    

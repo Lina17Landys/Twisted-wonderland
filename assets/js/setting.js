@@ -31,7 +31,7 @@ const render = async () => {
 
     const botonCerrar = document.querySelector("#cerrar");
     botonCerrar.addEventListener("click", () => {
-        cerrarSesion();
+        cerrarSesionWithoutAlert(); 
     });
 };
 
@@ -49,6 +49,11 @@ const actualizarInterfazUsuario = (nombre, biografia, fotoPerfil, fotoBanner) =>
     const fotoBannerElemento = document.querySelector('#foto-banner-preview');
     const fotoBannerURL = URL.createObjectURL(fotoBanner);
     fotoBannerElemento.src = fotoBannerURL;
+};
+
+const cerrarSesionWithoutAlert = () => {
+    localStorage.removeItem("usuario");
+    window.location.reload();
 };
 
 window.onload = render;
