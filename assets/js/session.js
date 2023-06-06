@@ -1,6 +1,3 @@
-const PERSONAS = "personas";
-const USUARIO = "usuario";
-
 export const estaEnSesion = () => {
     const usuario = localStorage.getItem(USUARIO);
 
@@ -159,4 +156,3 @@ export const eliminarFavorito = (id) => {
         localStorage.setItem(PERSONAS, JSON.stringify(usuariosJSON));
     }
 }
-
